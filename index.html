@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="drop.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+
+            $('#goto-register').on('click',function(){
+                $('.REGISTER').show();
+                $('.LOGIN').hide();
+            })
+            $('#goto-login').on('click',function(){
+                $('.REGISTER').hide();
+                $('.LOGIN').show();
+            })
+
+
+        })
+    </script>
+    <div class="LOGIN">
+    <div class="container">
+        <div class="drop">
+            <div class="contentBox">
+                <h2>Sign in</h2>
+            <form action="">
+                <div class="inputBox">
+                    <input type="text" placeholder="Username">
+                </div>
+                <div class="inputBox">
+                    <input type="password" placeholder="Password">
+                </div>
+                <div class="inputBox">
+                    <input type="submit"value="login">
+                </div>
+
+            </form></div>
+            
+        </div>
+        <button class="sign"       id="goto-register">SIGN UP</button>
+    </div>
+</div>
+
+
+<div class="REGISTER">
+    <div class="container">
+        <div class="drop">
+            <div class="contentBox">
+                <h2>Sign up</h2>
+            <form action="">
+                <div class="inputBox">
+                    <input type="text" placeholder="Fullname">
+                </div>
+                <div class="inputBox">
+                    <input type="tel" id="phone" name="phone"  placeholder="phone"   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                    
+                </div>
+                <div class="inputBox">
+                    <input type="password" placeholder="Password">
+                </div>
+                <div class="inputBox">
+                    <input type="password" placeholder="ConfirmPassword">
+                </div>
+
+                <div class="inputBox">
+                    <input type="submit"value="Signup">
+                </div>
+
+            </form></div>
+        </div>
+        <button    class="sign" id="goto-login">SIGN IN</button>
+
+    </div>
+</div>
+</body>
+</html>
